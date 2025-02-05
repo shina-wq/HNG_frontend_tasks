@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profilecard.css">
+    <title>HNG Profile Card</title>
+</head>
+<body>
+    <div class="card">
+        <img src="dp.jpg" alt="Profile Picture" class="profile-picture" data-testid="profilePicture">
+        <h2 data-testid="fullName">Shina Atete Mpeta</h2>
+        <h4 data-testid="jobTitle">Aspiring Full-Stack Developer</h4>
+        <p data-testid="shortBio">Passionate about coding, technology, and making an impact through software.</p>
+        <p data-testid="currentLocation">Kigali, Rwanda</p>
+        <p data-testid="emailAddress">atetempeta@gmail.com</p>
+        <div class="social-links" data-testid="socialLinks">
+            <a href="https://github.com/shina-wq">GitHub</a>
+            <a href="https://www.linkedin.com/in/shina-atete-mpeta-a13783252/">LinkedIn</a>
+            <a href="https://x.com/atete_mpeta">Twitter</a>
+        </div>
+        <p class="time" data-testid="currentTimeUTC">Loading UTC time...</p>
+    </div>
+    <script>
+        function updateTime() {
+            document.querySelector(".time").textContent = `Current UTC Time: ${new Date().toUTCString()}`;
+        }
+        updateTime();
+        setInterval(updateTime, 60000);
+    </script>
+</body>
+</html>
